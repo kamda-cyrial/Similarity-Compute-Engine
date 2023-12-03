@@ -133,11 +133,12 @@ def compute_author_scores_by_statement_2(page_size, query):
                     statement_1_list, statement_2_list
                 )
                 break
-            except Exception as _e:
+            except Exception as e:
                 if cnt > 3:
                     print("[ERROR]: Exceeded 3 retries")
                     return None
                 print("Failed, retrying in 30s...")
+                print("[Exception]:", e)
                 time.sleep(30)
                 print("retrying...")
                 continue
