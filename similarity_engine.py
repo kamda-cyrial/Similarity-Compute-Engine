@@ -231,7 +231,6 @@ def execute_queries():
                 print("[SUCCESS]: Processed query - ", query["_id"])
             else:
                 print("No pending queries")
-            break
         except Exception as e:
             print("[ERROR]:", e)
         time.sleep(1)
