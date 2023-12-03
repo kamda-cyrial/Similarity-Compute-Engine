@@ -63,7 +63,7 @@ def get_similarity_score(statements_1, statements_2):
                 "content": create_json_matrix_prompt(statements_1, statements_2),
             }
         ],
-        model="gpt-4",
+        model="GPT-3.5 Turbo",
         timeout=60,
     )
     return chat_completion.choices[0].message.content
